@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class plaindrome {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+String s1 = "MADAM";
+String s2 = "";
+int len = s1.length();
+
+StringBuilder reversed = new StringBuilder();
+for (int i = len - 1; i >= 0; i--) {
+    reversed.append(s1.charAt(i));
+}
+
+s2 = reversed.toString();
+
+if (s1.equals(s2))
+    System.out.print("Palindrome");
+else
+    System.out.print("Not palindrome");
