@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class PascalTriangle {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of rows for Pascal's triangle: ");
+        int n = input.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int number = 1;
+            System.out.printf("%" + (n - i) * 2 + "s", ""); // Print leading spaces
+            for (int j = 0; j <= i; j++) {
+                System.out.printf("%4d", number); // Adjust formatting to align the numbers
+                number = number * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
