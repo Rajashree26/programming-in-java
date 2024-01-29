@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class InterestCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter principal amount, years, and age (y/o): ");
+        int principal = input.nextInt(), years = input.nextInt();
+        char age = input.next().charAt(0);
+        
+        double rate = (age == 'y') ? 0.12 : (age == 'o') ? 0.1 : 0;
+        double interest = principal * years * rate / 100;
+        
+        System.out.println("Interest: " + interest);
+    }
+}
