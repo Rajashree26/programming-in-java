@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class FactorCalculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Given Number: ");
+        int number = input.nextInt();
+        
+        // Counting the number of factors
+        int factorsCount = countFactors(number);
+        System.out.println("Number of factors = " + factorsCount);
+        
+        System.out.print("N = ");
+        int n = input.nextInt();
+        
+        // Finding the nth factor
+        int nthFactor = findNthFactor(number, n);
+        System.out.println(n + "th factor of " + number + " = " + nthFactor);
+    }
+    
+    // Method to count the number of factors
+    public static int countFactors(int num) {
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+    
+    // Method to find the nth factor
+    public static int findNthFactor(int num, int n) {
+        int count = 0;
+        for (int i = 1; i <= num; i++) {
+            if (num % i == 0) {
+                count++;
+                if (count == n) {
+                    return i;
+                }
+            }
+        }
+        return -1; // Return -1 if the nth factor does not exist
+    }
+}
