@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class RightTrianglePattern {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+
+        // Create a 2D array to store the pattern
+        char[][] pattern = new char[n][n];
+
+        // Generate the right-angled triangle pattern
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                pattern[i][j] = '*';
+            }
+        }
+
+        // Display the pattern
+        System.out.println("Right-angled Triangle Pattern:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(pattern[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
