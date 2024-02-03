@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class Bank
+{
+ float getROI()
+ {
+ return 0;
+ }
+}
+class SBI extends Bank
+{
+ float getROI()
+ {
+ return 8.4f;
+ }
+}
+class ICICI extends Bank
+{
+ float getROI()
+ {
+ return 8.4f;
+ }
+}
+class AXIS extends Bank
+{
+ float getROI()
+ {
+ return 8.4f;
+ }
+}
+public class model 
+{
+ public static void main(String[] args) 
+{
+ Bank b;
+ b = new SBI();
+ System.out.println("SBI, " + b.getROI());
+}
+}
